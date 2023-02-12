@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Statistici Internet, Electricitate și Apă</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h2 class="card-title">Statistici Internet</h2>
+      <div class="card-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-info">
+                <h3>Server Usage</h3>
+                <h1 id="server-usage">Loading...</h1>
+                <div class="progress"></div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-info">
+                <h3>Latency</h3>
+                <h1 id="latency">Loading...</h1>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-info">
+                <h3>Average Network Speed</h3>
+                <h1 id="network-speed">Loading...</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="card-title">Statistici Electricitate</h2>
+      <div class="card-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-info">
+              <h3>Tensiune</h3>
+                <h1 id="tension">Loading...</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-info">
+              <h3>Voltaj</h3>
+                <h1 id="voltage">Loading...</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-info">
+              <h3>Amperaj</h3>
+                <h1 id="amperage">Loading...</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <h2 class="card-title">Statistici Apă</h2>
+      <div class="card-content">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="card-info">
+              <h3>Presiune</h3>
+              <h1>3 bar</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-info">
+              <h3>Debit</h3>
+              <h1>1 m³/s</h1>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card-info">
+              <h3>Consum</h3>
+              <h1>10 m³</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateInternetStats() {
+      // get current time
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+
+      // set new values based on time of day
+      var serverUsage = '80%';
+      var latency = '12ms';
+      var networkSpeed = '100 Mb/s';
+      if (hours >= 10 && hours < 23) {
+        serverUsage = getRandomInt(60, 80) + '%';
+        latency = getRandomInt(10, 18) + 'ms';
+        networkSpeed = getRandomInt(55, 70) + ' Mb/s';
+      } else {
+        serverUsage = getRandomInt(20, 40) + '%';
+        latency = getRandomInt(1, 10) + 'ms';
+        networkSpeed = getRandomInt(70, 100) + ' Mb/s';
+      }
+
+      // update values in HTML
+      document.getElementById('server-usage').innerHTML = serverUsage;
+      document.getElementById('latency').innerHTML = latency;
+      document.getElementById('network-speed').innerHTML = networkSpeed;
+    }
+
+    // get a random integer between min and max (inclusive)
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    // update stats every 10 seconds
+    setInterval(updateInternetStats, 2000);
+  </script>
+</body>
+</html>

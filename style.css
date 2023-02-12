@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f2f7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+  background-color: #f7f7f7;
+  padding: 20px;
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-md-4 {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+}
+
+.card-info {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-info h3 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+  color: #47494b;
+}
+
+.card-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+  color: #454647;
+}
+
+.progress {
+  background-color: #e0e0e0;
+  height: 10px;
+}
