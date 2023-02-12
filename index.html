@@ -93,6 +93,16 @@
     var serverUsage = '80%';
     var latency = '12ms';
     var networkSpeed = '100 Mb/s';
+    var tension = 'Loading...';  <script>
+  function updatestats() {
+    // get current time
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+  
+    // set new values based on time of day
+    var serverUsage = '80%';
+    var latency = '12ms';
+    var networkSpeed = '100 Mb/s';
     var tension = 'Loading...';
     var voltage = 'Loading...';
     var amperage = 'Loading...';
@@ -100,6 +110,121 @@
     var debit = 'Loading...';
     var consume = 'Loading...';
   
+    function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    if (hours >= 10 && hours < 23) {
+      serverUsage = getRandomInt(60, 80) + '%';
+      latency = getRandomInt(10, 18) + 'ms';
+      networkSpeed = getRandomInt(55, 70) + ' Mb/s';
+      tension = getRandomInt(220, 225) + ' V';
+      voltage = getRandomInt(120, 130) + ' V';
+      amperage = getRandomInt(10, 11) + ' A';
+      Presion = getRandomInt(2, 3) + ' bar';
+      debit = getRandomInt(6, 8) + ' m³/h';
+      consume = getRandomInt(6, 8) + ' m³/h';
+    } else {
+      serverUsage = getRandomInt(20, 40) + '%';
+      latency = getRandomInt(1, 10) + 'ms';
+      networkSpeed = getRandomInt(70, 100) + ' Mb/s';
+      tension = getRandomInt(220, 225) + ' V';
+      voltage = getRandomInt(120, 130) + ' V';
+      amperage = getRandomInt(1000, 1099) / 100 + ' A';
+      Presion = getRandomInt(4, 5) + " bar";
+      debit = getRandomInt(0, 2) + ' m³/h';
+      consume = getRandomInt(0, 2) + ' m³/h';
+    }
+  
+    // update values in HTML
+    document.getElementById('server-usage').innerHTML = serverUsage;
+    document.getElementById('latency').innerHTML = latency;
+    document.getElementById('network-speed').innerHTML = networkSpeed;
+    document.getElementById('tension').innerHTML = tension;
+    document.getElementById('voltage').innerHTML = voltage;
+    document.getElementById('amperage').innerHTML = amperage;
+    document.getElementById('Presion').innerHTML = Presion;
+    document.getElementById('debit').innerHTML = debit;
+    document.getElementById('consume').innerHTML = consume;
+  }
+  
+  // get a random integer between min and max (inclusive)
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  // update stats every 2 seconds
+  setInterval(updatestats, 2000);
+  </script>  <script>
+  function updatestats() {
+    // get current time
+    var currentTime = new Date();
+    var hours = currentTime.getHours();
+  
+    // set new values based on time of day
+    var serverUsage = '80%';
+    var latency = '12ms';
+    var networkSpeed = '100 Mb/s';
+    var tension = 'Loading...';
+    var voltage = 'Loading...';
+    var amperage = 'Loading...';
+    var Presion = "Loading...";
+    var debit = 'Loading...';
+    var consume = 'Loading...';
+  
+    function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+    if (hours >= 10 && hours < 23) {
+      serverUsage = getRandomInt(60, 80) + '%';
+      latency = getRandomInt(10, 18) + 'ms';
+      networkSpeed = getRandomInt(55, 70) + ' Mb/s';
+      tension = getRandomInt(220, 225) + ' V';
+      voltage = getRandomInt(120, 130) + ' V';
+      amperage = getRandomInt(10, 11) + ' A';
+      Presion = getRandomInt(2, 3) + ' bar';
+      debit = getRandomInt(6, 8) + ' m³/h';
+      consume = getRandomInt(6, 8) + ' m³/h';
+    } else {
+      serverUsage = getRandomInt(20, 40) + '%';
+      latency = getRandomInt(1, 10) + 'ms';
+      networkSpeed = getRandomInt(70, 100) + ' Mb/s';
+      tension = getRandomInt(220, 225) + ' V';
+      voltage = getRandomInt(120, 130) + ' V';
+      amperage = getRandomInt(1000, 1099) / 100 + ' A';
+      Presion = getRandomInt(4, 5) + " bar";
+      debit = getRandomInt(0, 2) + ' m³/h';
+      consume = getRandomInt(0, 2) + ' m³/h';
+    }
+  
+    // update values in HTML
+    document.getElementById('server-usage').innerHTML = serverUsage;
+    document.getElementById('latency').innerHTML = latency;
+    document.getElementById('network-speed').innerHTML = networkSpeed;
+    document.getElementById('tension').innerHTML = tension;
+    document.getElementById('voltage').innerHTML = voltage;
+    document.getElementById('amperage').innerHTML = amperage;
+    document.getElementById('Presion').innerHTML = Presion;
+    document.getElementById('debit').innerHTML = debit;
+    document.getElementById('consume').innerHTML = consume;
+  }
+  
+  // get a random integer between min and max (inclusive)
+  function getRandomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  
+  // update stats every 2 seconds
+  setInterval(updatestats, 2000);
+  </script>
+    var voltage = 'Loading...';
+    var amperage = 'Loading...';
+    var Presion = "Loading...";
+    var debit = 'Loading...';
+    var consume = 'Loading...';
+  
+    function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
     if (hours >= 10 && hours < 23) {
       serverUsage = getRandomInt(60, 80) + '%';
       latency = getRandomInt(10, 18) + 'ms';
